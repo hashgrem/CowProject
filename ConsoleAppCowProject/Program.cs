@@ -7,6 +7,8 @@ namespace ConsoleAppCowProject
     {
         static void Main(string[] args)
         {
+            float aire;
+
            
             Pre monPre = new Pre(new List<Piquet>());
             Console.WriteLine("Saisir un nombre de piquets \n");
@@ -30,11 +32,9 @@ namespace ConsoleAppCowProject
 
             }
 
-            monPre.Affiche();
-            float res = monPre.CalculAire();
-            Console.WriteLine(res);
-
-
+            aire = Math.Abs(monPre.CalculAire());
+            Console.WriteLine(aire);
+            
          
         }
     }
