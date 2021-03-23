@@ -52,8 +52,8 @@ namespace ConsoleAppCowProject
                 y1 = ListePiquets.ElementAt(i).Ordonnee;
                 y2 = ListePiquets.ElementAt(i+1).Ordonnee;
 
-                aire2 = aire2 + ( ( x1 * y2 ) - (x2 * y1));
-                
+                //aire2 = aire2 + ( ( x1 * y2 ) - (x2 * y1));
+                aire2 = aire2 + ((x2 + x1) * (y2 + y1));
 
             }
 
