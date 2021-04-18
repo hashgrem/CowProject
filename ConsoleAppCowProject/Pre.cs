@@ -8,7 +8,10 @@ namespace ConsoleAppCowProject
     public class Pre
     {
         private List<Piquet> listeDePiquets;
-        private float aire;
+        private double aire;
+        private double graviteX;
+        private double graviteY;
+
 
         public Pre (List<Piquet> listeDePiquets)
         {
@@ -21,14 +24,14 @@ namespace ConsoleAppCowProject
 
 
 
-        public float CalculAire()
+        public double CalculAire()
         {      
-            float aire=0;
-            float x1, x2;
-            float y1, y2;
+            double aire=0;
+            double x1, x2;
+            double y1, y2;
 
             //Liaison entre le segment 0 et n-1
-            float fermetureCloture = ListePiquets.ElementAt(0).Abscisse * ListePiquets.ElementAt(ListePiquets.Count-1).Ordonnee - ListePiquets.ElementAt(ListePiquets.Count-1).Abscisse * ListePiquets.ElementAt(0).Ordonnee;
+            double fermetureCloture = ListePiquets.ElementAt(ListePiquets.Count - 1).Abscisse * ListePiquets.ElementAt(0).Ordonnee - ListePiquets.ElementAt(0).Abscisse * ListePiquets.ElementAt(ListePiquets.Count - 1).Ordonnee;
 
             Console.WriteLine("Abcisse du dernier : {0} et ordonnee du dernier {1} ", ListePiquets.ElementAt(ListePiquets.Count - 1).Abscisse, ListePiquets.ElementAt(ListePiquets.Count - 1).Ordonnee);
 
@@ -43,24 +46,13 @@ namespace ConsoleAppCowProject
                 y2 = ListePiquets.ElementAt(i+1).Ordonnee;
 
 
-                //aire2 = aire2 + ( ( x1 * y2 ) - (x2 * y1));
-               //aire2 = aire2 + ((x2 + x1) * (y2 + y1));
-
-
                 aire += (x1 * y2) - (x2 * y1);
 
             }
 
-            //modulo n 
-            aire += Math.Abs(fermetureCloture%ListePiquets.Count);
+            aire += fermetureCloture;
             
             return aire/2;
-
-            /* 
-             * Voir : quand on calcul avec le segment n-1, ajouté le premier segment, donc quand 4 : 
-             * segment 3 calculé avec segment4.Abcisse + abcisse du segment 0 .. 
-             * Mettre if(i == ListePiquets.Count-1){ajouté au segment i+1 l'abcisse et ordonnee du segment 0}
-             * */
 
         }
 
@@ -68,16 +60,18 @@ namespace ConsoleAppCowProject
         public string CentreGravite()
         {
 
-            float x1, x2;
-            float y1, y2;
+            double x1, x2;
+            double y1, y2;
 
-            float absCentreGravite = 0, ordoCentreGravite = 0, aire;
+            double absCentreGravite = 0, ordoCentreGravite = 0, aire;
 
-            float totalX=0, totalY=0;
+            double totalX=0, totalY=0;
 
-            float premierMembre;
+            double premierMembre;
 
-            float partieGauche;
+            double partieGauche;
+
+            double fermetureX, fermetureY;
 
 
             string res;
@@ -99,29 +93,107 @@ namespace ConsoleAppCowProject
 
                 absCentreGravite += (x1 + x2) * (x1 * y2 - x2 * y1);
                 ordoCentreGravite += ((y1 + y2) * ((x1 * y2) - (x2 * y1)));
-                Console.WriteLine("(y1 + y2) * ((x1 * y2) - (x2 * y1)) = ({0} + {1}) * ({2} * {3} - {4} * {5})", y1, y2, x1, y2, x2, y1);
-                Console.WriteLine("Odronnée: {0}", ordoCentreGravite); 
-
 
             }
 
-            Console.WriteLine("1/6A = {0}", partieGauche);
-            Console.WriteLine("Ordonnée: {0}", ordoCentreGravite);
 
-            totalX =partieGauche * absCentreGravite;
-            totalY =partieGauche * ordoCentreGravite;
+            fermetureX = (ListePiquets.ElementAt(ListePiquets.Count - 1).Abscisse + ListePiquets.ElementAt(0).Abscisse) * ((ListePiquets.ElementAt(ListePiquets.Count - 1).Abscisse * ListePiquets.ElementAt(0).Ordonnee) -
+                (ListePiquets.ElementAt(0).Abscisse * ListePiquets.ElementAt(ListePiquets.Count - 1).Ordonnee));
+
+            fermetureY = (ListePiquets.ElementAt(ListePiquets.Count - 1).Ordonnee + ListePiquets.ElementAt(0).Ordonnee) * ((ListePiquets.ElementAt(ListePiquets.Count - 1).Abscisse * ListePiquets.ElementAt(0).Ordonnee) 
+                - (ListePiquets.ElementAt(0).Abscisse * ListePiquets.ElementAt(ListePiquets.Count - 1).Ordonnee));
+
+    
+
+            totalX = partieGauche *(absCentreGravite + fermetureX);
+            totalY = partieGauche * (ordoCentreGravite + fermetureY);
+
+            this.graviteX = totalX;
+            this.graviteY = totalY;
 
             res = "("+totalX+","+totalY+")"; 
 
             return res;
 
-
-
-
-
         }
-
         
+        public string Appartenance()
+        {
+            double thetaI;
+            double centreGravX = this.graviteX;
+            double centreGravY = this.graviteY;
 
+            double x1, x2;
+            double y1, y2;
+
+            double vecteurGS1_x, vecteurGS1_y,  vecteurGS2_x, vecteurGS2_y;
+
+            double numerateur, denumerateur;
+
+            double normeGS1, normeGS2;
+
+            double somme = 0;
+
+            string res;
+
+            double fermeture;
+         
+
+
+
+            for (int i = 0; i < ListePiquets.Count - 1; i++)
+            {
+                x1 = ListePiquets.ElementAt(i).Abscisse;
+                x2 = ListePiquets.ElementAt(i + 1).Abscisse;
+
+                y1 = ListePiquets.ElementAt(i).Ordonnee;
+                y2 = ListePiquets.ElementAt(i + 1).Ordonnee;
+
+                vecteurGS1_x = x1 - centreGravX;
+                vecteurGS1_y = y1 - centreGravY;
+
+                vecteurGS2_x = x2 - centreGravX;
+                vecteurGS2_y = y2 - centreGravY;
+
+                numerateur = vecteurGS1_x * vecteurGS2_x + vecteurGS1_y * vecteurGS2_y;
+
+                normeGS1 = (double)Math.Sqrt((vecteurGS1_x * vecteurGS1_x) + (vecteurGS1_y * vecteurGS1_y));
+                normeGS2 = (double)Math.Sqrt((vecteurGS2_x * vecteurGS2_x) + (vecteurGS2_y * vecteurGS2_y));
+
+                denumerateur = normeGS1 * normeGS2;
+
+                thetaI = (double)Math.Acos(numerateur / denumerateur);
+
+                somme += thetaI;
+
+            }
+
+            vecteurGS1_x = ListePiquets.ElementAt(ListePiquets.Count-1).Abscisse - centreGravX;
+            vecteurGS1_y = ListePiquets.ElementAt(ListePiquets.Count - 1).Ordonnee - centreGravY;
+
+            vecteurGS2_x = ListePiquets.ElementAt(0).Abscisse - centreGravX;
+            vecteurGS2_y = ListePiquets.ElementAt(0).Ordonnee - centreGravY;
+
+            normeGS1 = Math.Sqrt((vecteurGS1_x * vecteurGS1_x) + (vecteurGS1_y * vecteurGS1_y));
+            normeGS2 = Math.Sqrt((vecteurGS2_x * vecteurGS2_x) + (vecteurGS2_y * vecteurGS2_y));
+
+            denumerateur = normeGS1 * normeGS2;
+
+            numerateur = vecteurGS1_x * vecteurGS2_x + vecteurGS1_y * vecteurGS2_y;
+
+            thetaI = Math.Acos(numerateur / denumerateur);
+
+            somme += thetaI;
+
+
+            if (somme == (2 * Math.PI))
+                res = "La vache est dans le pré";
+
+            else
+                res = "Attention, la vache est hors du pré";
+
+            return res;
+
+        } 
     }
 }

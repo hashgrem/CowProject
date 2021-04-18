@@ -7,22 +7,24 @@ namespace ConsoleAppCowProject
     {
         static void Main(string[] args)
         {
-            float aire;
+            double aire;
             string centreGravite;
+            string appartenancePre;
 
            
             Pre monPre = new Pre(new List<Piquet>());
             Console.WriteLine("Saisir un nombre de piquets \n");
-            //try catch
+
+            // catch l'exception du type
             int nombreDePiquet = int.Parse(Console.ReadLine()); 
-            float abscisse;
-            float ordonnee;
+            double abscisse;
+            double ordonnee;
 
             for (int i=0; i< nombreDePiquet ;i++)
             {
                 Console.WriteLine("Saisir le piquet {0}", i+1);
-                abscisse = float.Parse(Console.ReadLine());
-                ordonnee = float.Parse(Console.ReadLine());
+                abscisse = double.Parse(Console.ReadLine());
+                ordonnee = double.Parse(Console.ReadLine());
 
 
                 Piquet monNouveauPiquet = new Piquet(abscisse, ordonnee);
@@ -38,6 +40,9 @@ namespace ConsoleAppCowProject
 
             centreGravite = monPre.CentreGravite();
             Console.WriteLine("Centre de gravité: {0}",centreGravite);
+
+            appartenancePre = monPre.Appartenance();
+            Console.WriteLine(appartenancePre);
             
 
 

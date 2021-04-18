@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jerem\\Desktop\\Université\\S4\\projet - CLERENTIN\\CowProject\\ConsoleAppCowProject\\ConsoleAppCowProject.csproj",
+      "projectUniqueName": "C:\\Users\\jerem\\Desktop\\All\\Université\\S4\\projet - CLERENTIN\\CowProject\\ConsoleAppCowProject\\ConsoleAppCowProject.csproj",
       "projectName": "ConsoleAppCowProject",
-      "projectPath": "C:\\Users\\jerem\\Desktop\\Université\\S4\\projet - CLERENTIN\\CowProject\\ConsoleAppCowProject\\ConsoleAppCowProject.csproj",
+      "projectPath": "C:\\Users\\jerem\\Desktop\\All\\Université\\S4\\projet - CLERENTIN\\CowProject\\ConsoleAppCowProject\\ConsoleAppCowProject.csproj",
       "packagesPath": "C:\\Users\\jerem\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jerem\\Desktop\\Université\\S4\\projet - CLERENTIN\\CowProject\\ConsoleAppCowProject\\obj\\",
+      "outputPath": "C:\\Users\\jerem\\Desktop\\All\\Université\\S4\\projet - CLERENTIN\\CowProject\\ConsoleAppCowProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jerem\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -6,24 +6,24 @@ namespace ConsoleAppCowProject
 {
     public class Piquet
     {
-        private float abscisse;
-        private float ordonnee;
+        private double abscisse;
+        private double ordonnee;
 
-        public Piquet(float abscisse, float ordonnee)
+        public Piquet(double abscisse, double ordonnee)
         {
             this.abscisse = abscisse;
             this.ordonnee = ordonnee;
 
         }
 
-        public float Abscisse
+        public double Abscisse
         {
             get {  return abscisse; }
 
             set { abscisse = value; }
         }
 
-        public float Ordonnee
+        public double Ordonnee
         {
             get { return ordonnee; }
 
