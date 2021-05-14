@@ -33,9 +33,6 @@ namespace ConsoleAppCowProject
             //Liaison entre le segment 0 et n-1
             double fermetureCloture = ListePiquets.ElementAt(ListePiquets.Count - 1).Abscisse * ListePiquets.ElementAt(0).Ordonnee - ListePiquets.ElementAt(0).Abscisse * ListePiquets.ElementAt(ListePiquets.Count - 1).Ordonnee;
 
-            Console.WriteLine("Abcisse du dernier : {0} et ordonnee du dernier {1} ", ListePiquets.ElementAt(ListePiquets.Count - 1).Abscisse, ListePiquets.ElementAt(ListePiquets.Count - 1).Ordonnee);
-
-
 
             for (int i=0; i < ListePiquets.Count-1; i++)
             {
@@ -136,11 +133,8 @@ namespace ConsoleAppCowProject
 
             string res;
 
-            double fermeture;
+            double determinant;
          
-
-
-
             for (int i = 0; i < ListePiquets.Count - 1; i++)
             {
                 x1 = ListePiquets.ElementAt(i).Abscisse;
@@ -157,12 +151,23 @@ namespace ConsoleAppCowProject
 
                 numerateur = vecteurGS1_x * vecteurGS2_x + vecteurGS1_y * vecteurGS2_y;
 
+
+                //Calcul de la norme des vecteurs
                 normeGS1 = (double)Math.Sqrt((vecteurGS1_x * vecteurGS1_x) + (vecteurGS1_y * vecteurGS1_y));
                 normeGS2 = (double)Math.Sqrt((vecteurGS2_x * vecteurGS2_x) + (vecteurGS2_y * vecteurGS2_y));
 
                 denumerateur = normeGS1 * normeGS2;
 
+                //Calcul du déterminant
+                determinant = (vecteurGS1_x * vecteurGS2_y) - (vecteurGS1_y * vecteurGS2_x);
+
+                
+                
                 thetaI = (double)Math.Acos(numerateur / denumerateur);
+
+                //Prise en compte du signe de l'angle
+                if (determinant < 0)
+                    thetaI = -thetaI;
 
                 somme += thetaI;
 
@@ -186,7 +191,7 @@ namespace ConsoleAppCowProject
             somme += thetaI;
 
 
-            if (somme == (2 * Math.PI))
+            if (somme != 0)
                 res = "La vache est dans le pré";
 
             else
