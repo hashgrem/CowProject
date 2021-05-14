@@ -8,7 +8,6 @@ namespace ConsoleAppCowProject
     public class Pre
     {
         private List<Piquet> listeDePiquets;
-        private double aire;
         private double graviteX;
         private double graviteY;
 
