@@ -1,17 +1,16 @@
 ﻿<Properties StartupConfiguration="{E280C238-5D13-4574-83C3-4D6D4658BE6C}|Default">
   <MonoDevelop.Ide.ItemProperties.ConsoleAppCowProject PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pre.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
       <File FileName="Program.cs" Line="35" Column="1" />
-      <File FileName="Pre.cs" Line="47" Column="1" />
-      <File FileName="Piquet.cs" />
+      <File FileName="Pre.cs" Line="25" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ConsoleAppCowProject" expanded="True">
             <Node name="ConsoleAppCowProject" expanded="True">
-              <Node name="Pre.cs" selected="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
