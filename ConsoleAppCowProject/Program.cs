@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using static ConsoleAppCowProject.Pre;
+using static ConsoleAppCowProject.Piquet;
 
 namespace ConsoleAppCowProject
 {
@@ -10,15 +12,22 @@ namespace ConsoleAppCowProject
             double aire;
             string centreGravite;
             string appartenancePre;
+            int nombreDePiquet;
+            double abscisse;
+            double ordonnee;
+            Pre monPre;
 
             try
             {
-                Console.WriteLine("Saisir un nombre de piquets \n");
-                Pre monPre = new Pre(new List<Piquet>());
+                //On vérifie si l'utilisateur saisie au moins 3 piquets pour former un pré
+                do
+                {
+                    Console.WriteLine("Saisir un nombre de piquets supérieur à 2\n");
+                    nombreDePiquet = int.Parse(Console.ReadLine());
+                }
+                while (nombreDePiquet <= 2);
 
-                double abscisse;
-                double ordonnee;
-                int nombreDePiquet = int.Parse(Console.ReadLine());
+                monPre = new Pre(new List<Piquet>());
 
                 for (int i = 0; i < nombreDePiquet; i++)
                 {
@@ -27,9 +36,11 @@ namespace ConsoleAppCowProject
                     ordonnee = double.Parse(Console.ReadLine());
 
 
-                    Piquet monNouveauPiquet = new Piquet(abscisse, ordonnee);
-                    monNouveauPiquet.Abscisse = abscisse;
-                    monNouveauPiquet.Ordonnee = ordonnee;
+                    Piquet monNouveauPiquet = new Piquet(abscisse, ordonnee)
+                    {
+                        Abscisse = abscisse,
+                        Ordonnee = ordonnee
+                    };
 
                     monPre.ListePiquets.Add(monNouveauPiquet);
 
@@ -46,7 +57,7 @@ namespace ConsoleAppCowProject
             }
             catch(Exception e)
             {
-                Console.WriteLine("Il faut entrer un nombre : {0}", e.Message);
+                Console.WriteLine("Erreur de saisie : {0}", e.Message);
             }
             
         }

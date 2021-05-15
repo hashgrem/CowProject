@@ -2,14 +2,17 @@
   <MonoDevelop.Ide.ItemProperties.ConsoleAppCowProject PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Program.cs" Line="35" Column="1" />
-      <File FileName="Pre.cs" Line="25" Column="1" />
+      <File FileName="Pre.cs" Line="7" Column="2" />
+      <File FileName="Program.cs" Line="18" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ConsoleAppCowProject" expanded="True">
             <Node name="ConsoleAppCowProject" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+              </Node>
               <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
