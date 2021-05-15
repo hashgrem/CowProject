@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using static ConsoleAppCowProject.Pre;
-using static ConsoleAppCowProject.Piquet;
 
 namespace ConsoleAppCowProject
 {
