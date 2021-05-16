@@ -9,6 +9,10 @@ namespace ConsoleAppCowProject
         private double abscisse;
         private double ordonnee;
 
+        // Création:
+        //      - constructeur de piquet
+        //      - getter & setter Abscisse
+        //      - getter & setter Ordonnée
         public Piquet(double abscisse, double ordonnee)
         {
             this.abscisse = abscisse;
@@ -18,7 +22,7 @@ namespace ConsoleAppCowProject
 
         public double Abscisse
         {
-            get {  return abscisse; }
+            get { return abscisse; }
 
             set { abscisse = value; }
         }
