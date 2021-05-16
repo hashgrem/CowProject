@@ -211,8 +211,6 @@ namespace ConsoleAppCowProject
 
                 somme += thetaI;
 
-                // ---------------------------------------------------------------------------------- //
-
             }
 
             // ----------------- Calcul pour la fermeture du pré : premier piquet avec le dernier : ------------------- //
