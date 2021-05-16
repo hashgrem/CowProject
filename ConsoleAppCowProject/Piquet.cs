@@ -4,15 +4,22 @@ using System.Text;
 
 namespace ConsoleAppCowProject
 {
+    /// <summary>
+    /// Classe Piquet contenant une abscisse et une ordonnée
+    /// </summary>
     public class Piquet
     {
         private double abscisse;
         private double ordonnee;
 
-        // Création:
+        /// <summary>
+        /// Création:
         //      - constructeur de piquet
         //      - getter & setter Abscisse
         //      - getter & setter Ordonnée
+        /// </summary>
+        /// <param name="abscisse"></param>
+        /// <param name="ordonnee"></param>
         public Piquet(double abscisse, double ordonnee)
         {
             this.abscisse = abscisse;

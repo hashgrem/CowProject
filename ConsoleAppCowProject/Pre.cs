@@ -5,6 +5,9 @@ using System.Text;
 
 namespace ConsoleAppCowProject
 {
+    /// <summary>
+    /// Classe Pre contenant une liste de piquets et un centre de gravité (abscisse et ordonnée)
+    /// </summary>
     public class Pre
     {
         private List<Piquet> listeDePiquets;
@@ -23,7 +26,10 @@ namespace ConsoleAppCowProject
         }
 
 
-
+        /// <summary>
+        /// Calcule l'aire du pré
+        /// </summary>
+        /// <returns>L'aire du pré</returns>
         public double CalculAire()
         {
             double aire = 0;
@@ -61,7 +67,10 @@ namespace ConsoleAppCowProject
 
         }
 
-
+        /// <summary>
+        /// Calcule le centre de gravité du pré
+        /// </summary>
+        /// <returns>Centre de gravité du pré sous un affichage (abscisse,ordonnée)</returns>
         public string CentreGravite()
         {
 
@@ -85,13 +94,13 @@ namespace ConsoleAppCowProject
 
             aire = CalculAire();
 
-            // Nous avons décomposé le calcul en plusieurs variables
+            // Simplification du calcul par une décomposition
 
             premierMembre = (6 * aire); // --> 6A
             partieGauche = 1 / premierMembre; // --> 1 / 6A
 
             // De la même manière que précedemment, on traduit le 'sigma' par une boucle FOR
-            // et on récupère chaque coordonnée avec la méthode ElementAt().
+            // et on récupère chaque coordonnées avec la méthode ElementAt().
 
             for (int i = 0; i < ListePiquets.Count - 1; i++)
             {
@@ -130,6 +139,10 @@ namespace ConsoleAppCowProject
 
         }
 
+        /// <summary>
+        /// Calcul l'appartenance du centre de gravité au polygone (pré)
+        /// </summary>
+        /// <returns>L'appartenance de la vache au pré</returns>
         public string Appartenance()
         {
             double thetaI;
@@ -200,7 +213,9 @@ namespace ConsoleAppCowProject
 
                 // ---------------------------------------------------------------------------------- //
 
-            } // FIN POUR 
+            }
+
+            // ----------------- Calcul pour la fermeture du pré : premier piquet avec le dernier : ------------------- //
 
             vecteurGS1_x = ListePiquets.ElementAt(ListePiquets.Count - 1).Abscisse - centreGravX;
             vecteurGS1_y = ListePiquets.ElementAt(ListePiquets.Count - 1).Ordonnee - centreGravY;
@@ -208,18 +223,26 @@ namespace ConsoleAppCowProject
             vecteurGS2_x = ListePiquets.ElementAt(0).Abscisse - centreGravX;
             vecteurGS2_y = ListePiquets.ElementAt(0).Ordonnee - centreGravY;
 
+            numerateur = vecteurGS1_x * vecteurGS2_x + vecteurGS1_y * vecteurGS2_y;
+
             normeGS1 = Math.Sqrt((vecteurGS1_x * vecteurGS1_x) + (vecteurGS1_y * vecteurGS1_y));
             normeGS2 = Math.Sqrt((vecteurGS2_x * vecteurGS2_x) + (vecteurGS2_y * vecteurGS2_y));
 
             denumerateur = normeGS1 * normeGS2;
 
-            numerateur = vecteurGS1_x * vecteurGS2_x + vecteurGS1_y * vecteurGS2_y;
+            thetaI = (double)Math.Acos(numerateur / denumerateur);
 
-            thetaI = Math.Acos(numerateur / denumerateur);
+            //Calcul du déterminant
+            determinant = (vecteurGS1_x * vecteurGS2_y) - (vecteurGS1_y * vecteurGS2_x);
+
+            //Prise en compte du signe de l'angle
+            if (determinant < 0)
+                thetaI = -thetaI;
 
             somme += thetaI;
 
 
+            //Conclusion de l'appartenance au polygone
             if (somme != 0)
                 res = "La vache est dans le pré";
 

@@ -42,7 +42,7 @@ namespace ConsoleAppCowProject
                         Ordonnee = ordonnee
                     };
 
-                    // On ajoute le piqet saisi par l'utilisateur au pré.
+                    // On ajoute le piquet saisi par l'utilisateur au pré.
                     monPre.ListePiquets.Add(monNouveauPiquet);
 
                 }
