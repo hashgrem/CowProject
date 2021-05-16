@@ -23,19 +23,6 @@ C:/Users/jerem/Desktop/Université/S4/projet - CLERENTIN/CowProject/ConsoleAppCo
 C:/Users/jerem/Desktop/Université/S4/projet - CLERENTIN/CowProject/ConsoleAppCowProject/bin/Debug/netcoreapp3.1/ConsoleAppCowProject.pdb
 C:/Users/jerem/Desktop/Université/S4/projet - CLERENTIN/CowProject/ConsoleAppCowProject/obj/Debug/netcoreapp3.1/ConsoleAppCowProject.genruntimeconfig.cache
 C:/Users/jerem/Desktop/Université/S4/projet - CLERENTIN/CowProject/ConsoleAppCowProject/obj/Debug/netcoreapp3.1/ConsoleAppCowProject.csprojAssemblyReference.cache
-C:/Users/jerem/Desktop/All/Université/S4/projet - CLERENTIN/CowProject/ConsoleAppCowProject/bin/Debug/netcoreapp3.1/ConsoleAppCowProject.exe
-C:/Users/jerem/Desktop/All/Université/S4/projet - CLERENTIN/CowProject/ConsoleAppCowProject/bin/Debug/netcoreapp3.1/ConsoleAppCowProject.deps.json
-C:/Users/jerem/Desktop/All/Université/S4/projet - CLERENTIN/CowProject/ConsoleAppCowProject/bin/Debug/netcoreapp3.1/ConsoleAppCowProject.runtimeconfig.json
-C:/Users/jerem/Desktop/All/Université/S4/projet - CLERENTIN/CowProject/ConsoleAppCowProject/bin/Debug/netcoreapp3.1/ConsoleAppCowProject.runtimeconfig.dev.json
-C:/Users/jerem/Desktop/All/Université/S4/projet - CLERENTIN/CowProject/ConsoleAppCowProject/bin/Debug/netcoreapp3.1/ConsoleAppCowProject.dll
-C:/Users/jerem/Desktop/All/Université/S4/projet - CLERENTIN/CowProject/ConsoleAppCowProject/bin/Debug/netcoreapp3.1/ConsoleAppCowProject.pdb
-C:/Users/jerem/Desktop/All/Université/S4/projet - CLERENTIN/CowProject/ConsoleAppCowProject/obj/Debug/netcoreapp3.1/ConsoleAppCowProject.csprojAssemblyReference.cache
-C:/Users/jerem/Desktop/All/Université/S4/projet - CLERENTIN/CowProject/ConsoleAppCowProject/obj/Debug/netcoreapp3.1/ConsoleAppCowProject.AssemblyInfoInputs.cache
-C:/Users/jerem/Desktop/All/Université/S4/projet - CLERENTIN/CowProject/ConsoleAppCowProject/obj/Debug/netcoreapp3.1/ConsoleAppCowProject.AssemblyInfo.cs
-C:/Users/jerem/Desktop/All/Université/S4/projet - CLERENTIN/CowProject/ConsoleAppCowProject/obj/Debug/netcoreapp3.1/ConsoleAppCowProject.csproj.CoreCompileInputs.cache
-C:/Users/jerem/Desktop/All/Université/S4/projet - CLERENTIN/CowProject/ConsoleAppCowProject/obj/Debug/netcoreapp3.1/ConsoleAppCowProject.dll
-C:/Users/jerem/Desktop/All/Université/S4/projet - CLERENTIN/CowProject/ConsoleAppCowProject/obj/Debug/netcoreapp3.1/ConsoleAppCowProject.pdb
-C:/Users/jerem/Desktop/All/Université/S4/projet - CLERENTIN/CowProject/ConsoleAppCowProject/obj/Debug/netcoreapp3.1/ConsoleAppCowProject.genruntimeconfig.cache
 /Users/remycastro/Desktop/CowProject/ConsoleAppCowProject/bin/Debug/netcoreapp3.1/ConsoleAppCowProject.deps.json
 /Users/remycastro/Desktop/CowProject/ConsoleAppCowProject/bin/Debug/netcoreapp3.1/ConsoleAppCowProject.runtimeconfig.json
 /Users/remycastro/Desktop/CowProject/ConsoleAppCowProject/bin/Debug/netcoreapp3.1/ConsoleAppCowProject.runtimeconfig.dev.json
@@ -48,3 +35,15 @@ C:/Users/jerem/Desktop/All/Université/S4/projet - CLERENTIN/CowProject/ConsoleA
 /Users/remycastro/Desktop/CowProject/ConsoleAppCowProject/obj/Debug/netcoreapp3.1/ConsoleAppCowProject.dll
 /Users/remycastro/Desktop/CowProject/ConsoleAppCowProject/obj/Debug/netcoreapp3.1/ConsoleAppCowProject.pdb
 /Users/remycastro/Desktop/CowProject/ConsoleAppCowProject/obj/Debug/netcoreapp3.1/ConsoleAppCowProject.genruntimeconfig.cache
+C:\Users\jerem\Desktop\All\Université\S4\projet - CLERENTIN\CowProject\ConsoleAppCowProject\bin\Debug\netcoreapp3.1\ConsoleAppCowProject.exe
+C:\Users\jerem\Desktop\All\Université\S4\projet - CLERENTIN\CowProject\ConsoleAppCowProject\bin\Debug\netcoreapp3.1\ConsoleAppCowProject.deps.json
+C:\Users\jerem\Desktop\All\Université\S4\projet - CLERENTIN\CowProject\ConsoleAppCowProject\bin\Debug\netcoreapp3.1\ConsoleAppCowProject.runtimeconfig.json
+C:\Users\jerem\Desktop\All\Université\S4\projet - CLERENTIN\CowProject\ConsoleAppCowProject\bin\Debug\netcoreapp3.1\ConsoleAppCowProject.runtimeconfig.dev.json
+C:\Users\jerem\Desktop\All\Université\S4\projet - CLERENTIN\CowProject\ConsoleAppCowProject\bin\Debug\netcoreapp3.1\ConsoleAppCowProject.dll
+C:\Users\jerem\Desktop\All\Université\S4\projet - CLERENTIN\CowProject\ConsoleAppCowProject\bin\Debug\netcoreapp3.1\ConsoleAppCowProject.pdb
+C:\Users\jerem\Desktop\All\Université\S4\projet - CLERENTIN\CowProject\ConsoleAppCowProject\obj\Debug\netcoreapp3.1\ConsoleAppCowProject.AssemblyInfoInputs.cache
+C:\Users\jerem\Desktop\All\Université\S4\projet - CLERENTIN\CowProject\ConsoleAppCowProject\obj\Debug\netcoreapp3.1\ConsoleAppCowProject.AssemblyInfo.cs
+C:\Users\jerem\Desktop\All\Université\S4\projet - CLERENTIN\CowProject\ConsoleAppCowProject\obj\Debug\netcoreapp3.1\ConsoleAppCowProject.csproj.CoreCompileInputs.cache
+C:\Users\jerem\Desktop\All\Université\S4\projet - CLERENTIN\CowProject\ConsoleAppCowProject\obj\Debug\netcoreapp3.1\ConsoleAppCowProject.dll
+C:\Users\jerem\Desktop\All\Université\S4\projet - CLERENTIN\CowProject\ConsoleAppCowProject\obj\Debug\netcoreapp3.1\ConsoleAppCowProject.pdb
+C:\Users\jerem\Desktop\All\Université\S4\projet - CLERENTIN\CowProject\ConsoleAppCowProject\obj\Debug\netcoreapp3.1\ConsoleAppCowProject.genruntimeconfig.cache

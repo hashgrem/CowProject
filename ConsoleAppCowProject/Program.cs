@@ -25,8 +25,10 @@ namespace ConsoleAppCowProject
                 }
                 while (nombreDePiquet <= 2);
 
+                // Un pré = une liste de piquets.
                 monPre = new Pre(new List<Piquet>());
 
+                // Saisie des coordonnées de chaque piquets.
                 for (int i = 0; i < nombreDePiquet; i++)
                 {
                     Console.WriteLine("Saisir le piquet {0}", i + 1);
@@ -40,10 +42,12 @@ namespace ConsoleAppCowProject
                         Ordonnee = ordonnee
                     };
 
+                    // On ajoute le piqet saisi par l'utilisateur au pré.
                     monPre.ListePiquets.Add(monNouveauPiquet);
 
                 }
 
+                // Appel des 3 méthodes.
                 aire = Math.Abs(monPre.CalculAire());
                 Console.WriteLine(aire);
 
@@ -53,11 +57,11 @@ namespace ConsoleAppCowProject
                 appartenancePre = monPre.Appartenance();
                 Console.WriteLine(appartenancePre);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine("Erreur de saisie : {0}", e.Message);
             }
-            
+
         }
     }
 }
