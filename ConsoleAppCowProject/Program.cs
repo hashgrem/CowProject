@@ -49,7 +49,7 @@ namespace ConsoleAppCowProject
 
                 // Appel des 3 méthodes.
                 aire = Math.Abs(monPre.CalculAire());
-                Console.WriteLine(aire);
+                Console.WriteLine("Aire du pré : {0}",aire);
 
                 centreGravite = monPre.CentreGravite();
                 Console.WriteLine("Centre de gravité: {0}", centreGravite);
